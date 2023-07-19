@@ -35,3 +35,17 @@ const displayOptions = () => {
 }
 
 //block all the buttons 
+const blocker = () => {
+    let optionsButtons = document.querySelectorAll(".options");
+    let letterButtons = document.querySelectorAll(".letters");
+    //disable all options
+    optionsButtons.forEach((button) => {
+        button.disabled = true;
+    });
+
+    //disable all letters
+    letterButtons.forEach((button) => {
+        button.disabled = true;
+    });
+    newGameContainer.classList.remove("hide");
+};
