@@ -49,3 +49,24 @@ const blocker = () => {
     });
     newGameContainer.classList.remove("hide");
 };
+
+//word generator
+const generateWord = (optionValue) => {
+    let optionsButtons = document.querySelectorAll(".options");
+    //if optionsValue matches the button innerText then highlight the button
+    optionsButtons.forEach((button) => {
+        if (button.innerText.toLowercase() === optionValue) {
+            button.classList.add("active");
+        }
+        button.disabled = true;
+    });
+
+    //initially hide letters, clear previous word
+    letterContainer.classList.remove("hide");
+    userInputSection.innerText = "";
+    
+    let optionArray = options[optionValue];
+    //choose random word
+    chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
+    chosenWord = chosenWord.toUpperCase();
+}
