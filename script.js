@@ -69,4 +69,37 @@ const generateWord = (optionValue) => {
     //choose random word
     chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
     chosenWord = chosenWord.toUpperCase();
+
+    //replace every word with span containing dash
+    let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
+
+    //display each element as span
+    userInputSection.innerHTML = displayItem;
+}
+
+//initial function (called when page loads / user presses new game)
+const initializer = () => {
+    winCount = 0;
+    count = 0;
+
+    //initially erase all content and hide letters and new game button
+    userInputSection.innerHTML = "";
+    optionsContainer.innerHTML = "";
+    letterContainer.classList.add("hide");
+    newGameContainer.classList.add("hide");
+    letterContainer.innerHTML = "";
+
+    //for creating letter buttons
+    for (let i = 65; i < 91; i++) {
+        let button = document.createElement("button");
+        button.classList.add("letters");
+        //number to ASCII[A-Z]
+        button.innerText = String.fromCharCode(i);
+        //character button click
+        button.addEventListener("click", () => {
+            let charArray = chosenWord.split("");
+            let dashes = document.getElementsByClassName("dashes");
+            
+        })
+    }
 }
