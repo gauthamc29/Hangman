@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    font-size: 16;
+    font-size: 16px;
     background-color: #ffffff;
     width: 90vw;
     max-width: 34em;
@@ -50,7 +50,7 @@ body {
     background-color: #efefef;
 }
 
-#options-container button:active {
+#options-container button.active {
     background-color: #8c52ff;
     border: 3px solid #000000;
     color: #ffffff;
@@ -96,7 +96,7 @@ body {
 canvas {
     display: block;
     margin: auto;
-    border: 10x solid #8c52ff;
+    border: 10px solid #8c52ff;
     border-radius: 10px;
 }
 
@@ -110,7 +110,7 @@ canvas {
 }
 
 #result-text p {
-    font-size: 1.2em;
+    font-size: 1.25em;
     margin: 1em 0 2em 0;
 }
 
